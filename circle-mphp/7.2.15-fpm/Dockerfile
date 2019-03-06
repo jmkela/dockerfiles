@@ -4,11 +4,13 @@
 
 FROM circleci/php:7.2.15-fpm-stretch-node-browsers
 
+USER root
+
 # Install AWS CLI
-RUN apt install -y awscli
+RUN apt-get -y install awscli
 
 # Install common extensions
-RUN apt install -y libxslt1-dev mysql-client libicu-dev zlib1g-dev libzip-dev
+RUN apt-get -y install libxslt1-dev mysql-client libicu-dev zlib1g-dev libzip-dev
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install bcmath
