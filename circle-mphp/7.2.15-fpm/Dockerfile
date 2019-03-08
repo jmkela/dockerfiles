@@ -10,7 +10,9 @@ USER root
 RUN apt-get -y install awscli
 
 # Install common extensions
-RUN apt-get -y install libxslt1-dev mysql-client libicu-dev zlib1g-dev libzip-dev
+RUN apt-get -y install mysql-client \
+    libxslt1-dev libicu-dev zlib1g-dev libzip-dev \
+    libpng-dev
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install zip
