@@ -18,6 +18,7 @@ RUN echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb stable main" >>
 RUN apt-get update
 RUN apt-get --only-upgrade install google-chrome-stable
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
+RUN docker-php-ext-install json xml calendar
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install bcmath
