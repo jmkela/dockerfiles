@@ -27,7 +27,6 @@ RUN docker-php-ext-install pdo pdo_mysql
 RUN docker-php-ext-install xsl
 RUN docker-php-ext-install soap
 RUN docker-php-ext-enable bcmath gd
-RUN docker-php-ext-disable xdebug
 RUN pecl install pcov
 
 USER circleci
