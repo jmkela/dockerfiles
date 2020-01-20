@@ -2,7 +2,7 @@
 ### UKKO.com PHP CircleCI Docker test container
 ###
 
-FROM circleci/php:7.2.15-fpm-stretch-node-browsers
+FROM circleci/php:7.2-fpm-stretch-node-browsers
 
 USER root
 
