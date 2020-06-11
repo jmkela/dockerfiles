@@ -2,7 +2,7 @@
 ### UKKO.com PHP CircleCI Docker test container
 ###
 
-FROM circleci/php:7.4-fpm-node-browsers
+FROM circleci/php:7.4-fpm-buster-node-browsers
 
 USER root
 
