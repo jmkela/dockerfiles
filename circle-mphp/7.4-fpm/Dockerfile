@@ -10,7 +10,7 @@ USER root
 RUN apt-get -y install awscli
 
 # Install common extensions
-RUN apt-get -y install mysql-client-5.7 \
+RUN apt-get -y install mariadb-client-10.3 \
     libxslt1-dev libicu-dev zlib1g-dev libzip-dev \
     libpng-dev libjpeg-dev
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
